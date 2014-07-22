@@ -1,0 +1,9 @@
+.settings
+.idea*
+.project
+.iml
+target/*
+project/target/*
+project/project/*
+.classpath
+sbt-launch.jar
