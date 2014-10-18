@@ -8,7 +8,7 @@ object AkkaTwitterStreamingCluster extends Build {
   val streamingClusterSettings = Seq(
     name := "akka-twitter-streaming-cluster",
     organization := "com.github.alexanderscott",
-    scalaVersion := "2.10.4",
+    crossScalaVersions := Seq("2.10.4", "2.11.2")
 
     parallelExecution in Test := false,
 

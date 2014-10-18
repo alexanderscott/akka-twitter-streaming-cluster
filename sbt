@@ -9,7 +9,7 @@ sbtjar=sbt-launch.jar
 
 if [ ! -f $sbtjar ]; then
   echo 'downloading '$sbtjar 1>&2
-  curl -O http://typesafe.artifactoryonline.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch/0.13.1/$sbtjar
+  curl -O http://typesafe.artifactoryonline.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch/0.13.5/$sbtjar
 fi
 
 test -f $sbtjar || exit 1
@@ -31,10 +31,9 @@ java -ea                          \
   -XX:+UseConcMarkSweepGC         \
   -XX:+CMSParallelRemarkEnabled   \
   -XX:+CMSClassUnloadingEnabled   \
-  -XX:MaxPermSize=1024m           \
   -XX:SurvivorRatio=128           \
   -XX:MaxTenuringThreshold=0      \
-  -Xss8M                          \
+  -Xmn1024M
   -Xms512M                        \
   -Xmx1G                          \
   -server                         \
