@@ -1,13 +1,20 @@
 package com.github.alexanderscott.twitterstream.core
 
-import akka.actor.{ActorRef, Actor, Props}
+import akka.actor.{ActorRef, Actor, Props, ActorLogging}
 import spray.http._
+import spray.httpx._
+import spray.httpx.TransformerPipelineSupport
 import spray.can.Http
 import spray.http.HttpRequest
+import spray.io._
+import akka.io._
+import spray.routing._
+import com.github.alexanderscott.twitterstream.oauth._
 
 object TweetStreamBackendActor {
   val twitterUri = Uri("https://stream.twitter.com/1.1/statuses/filter.json")
-  def props(): Props = Props(classOf[TweetStreamBackendActor](twitterUri))
+
+  def props(): Props = Props(classOf[TweetStreamBackendActor], twitterUri)
 }
 
 class TweetStreamBackendActor(uri: Uri, processor: ActorRef) extends Actor with ActorLogging with TweetMarshaller {

@@ -1,18 +1,11 @@
 package com.github.alexanderscott.twitterstream.core
 
-import spray.httpx.unmarshalling.{MalformedContent, Unmarshaller, Deserialized}
+import com.github.alexanderscott.twitterstream.domain.{Tweet, TwitterPlace => Place, TwitterUser => User}
 import spray.http._
+import spray.httpx.unmarshalling.{Deserialized, MalformedContent, Unmarshaller}
 import spray.json._
-import spray.client.pipelining._
-import akka.actor.{ActorRef, Actor}
-import spray.http.HttpRequest
-import scala.Some
-import com.github.alexanderscott.twitterstream.domain.{TwitterPlace => Place, TwitterUser => User, TwitterTweet => Tweet}
-import scala.io.Source
+
 import scala.util.Try
-import spray.can.Http
-import akka.io.IO
-import com.github.alexanderscott.twitterstream.oauth._
 
 trait TweetMarshaller {
 
@@ -53,4 +46,3 @@ trait TweetMarshaller {
     }.getOrElse(Left(MalformedContent("bad json")))
   }
 }
-
