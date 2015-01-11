@@ -1,3 +1,5 @@
 # akka-twitter-streaming-cluster (WIP)
-Akka cluster for distributed Twitter Streaming API workers
+Distributed Twitter Streaming API coordination using Akka cluster.
+
+Very much a **work-in-progress**...
 
