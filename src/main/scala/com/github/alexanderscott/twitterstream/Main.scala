@@ -20,11 +20,18 @@ object Main extends App {
       return
     }
 
+    system.actorOf(ClusterSingletonProxy.props(
+      singletonPath = "/user/singleton/stream-proxy",
+      role = Some("backend")),
+      name = "streamProxy")
+
+    /*
     system.actorOf(TwitterStreamProxySingletonProxy.props(
       config = config,
       singletonPath = "/user/singleton/stream-proxy",
       role = Some("backend")),
       name = "streamProxy")
+      */
 
 
     system.actorOf(ClusterSingletonManager.props(
@@ -41,7 +48,7 @@ object Main extends App {
     println("║ Akka Twitter Streaming Cluster  ║")
     println("╚═════════════════════════════════╝")
 
-    val system = ActorSystem("twitterstreaming")
+    val system = ActorSystem("TwitterStreaming")
 
     val config = ConfigFactory.load()
     if (!config.hasPath("twitterstreaming")){
