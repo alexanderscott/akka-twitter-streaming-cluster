@@ -1,4 +1,4 @@
-package com.github.alexanderscott.twitterstream.oauth
+package com.github.alexanderscott.twitterstream.auth
 
 import javax.crypto
 import java.nio.charset.Charset

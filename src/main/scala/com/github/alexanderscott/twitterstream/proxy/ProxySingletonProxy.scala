@@ -16,14 +16,14 @@ import akka.persistence.PersistentActor
 import com.typesafe.config.Config
 import scala.concurrent.duration._
 
-object TwitterStreamProxySingletonProxy {
+object ProxySingletonProxy {
 
   def props(config: Config, singletonPath: String, role: Option[String]): Props = {
-    Props(classOf[TwitterStreamProxySingletonProxy], config, singletonPath, role)
+    Props(classOf[ProxySingletonProxy], config, singletonPath, role)
   }
 }
 
-class TwitterStreamProxySingletonProxy(config: Config, singletonPath: String, role: Option[String])
+class ProxySingletonProxy(config: Config, singletonPath: String, role: Option[String])
   extends ClusterSingletonProxy(singletonPath, role, 1.second) {
 
   private val ageOrdering = Ordering.fromLessThan[Member] {

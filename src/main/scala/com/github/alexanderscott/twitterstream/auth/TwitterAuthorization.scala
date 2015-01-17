@@ -1,9 +1,8 @@
-package com.github.alexanderscott.twitterstream.oauth
+package com.github.alexanderscott.twitterstream.auth
 
 import com.typesafe.config.ConfigFactory
 import spray.http.HttpRequest
-import scala.io.Source
-import com.github.alexanderscott.twitterstream.oauth.OAuth._
+import com.github.alexanderscott.twitterstream.auth.OAuth._
 
 trait TwitterAuthorization {
   def authorize: HttpRequest => HttpRequest
@@ -11,15 +10,7 @@ trait TwitterAuthorization {
 
 trait OAuthTwitterAuthorization extends TwitterAuthorization {
 
-  /*
-  val home = System.getProperty("user.home")
-  val lines = Source.fromFile(s"$home/.twitter/activator").getLines().toList
-
-  val consumer = Consumer(lines(0), lines(1))
-  val token = Token(lines(2), lines(3))
-  */
-
-  val twitterAuthConfig = ConfigFactory.load().atKey("twitterstreaming.backend.auth")
+  val twitterAuthConfig = ConfigFactory.load().getConfig("twitterstreaming.backend.auth")
   private[this] val consumerKey = twitterAuthConfig.getString("consumer-key")
   private[this] val consumerSecret = twitterAuthConfig.getString("consumer-secret")
   private[this] val accessToken = twitterAuthConfig.getString("access-token")

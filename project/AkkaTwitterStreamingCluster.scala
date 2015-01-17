@@ -36,6 +36,9 @@ object AkkaTwitterStreamingCluster extends Build {
       "com.typesafe.akka"       %% "akka-slf4j"           % "2.3.4",
       "com.typesafe.akka"       %% "akka-testkit"         % "2.3.4"  % "test",
 
+
+      "com.github.nscala-time"  %% "nscala-time"          % "1.2.0",
+
       "io.netty"                % "netty-all"             % "4.0.19.Final",
 
       "io.spray"                %  "spray-can"            % "1.3.1",
@@ -45,6 +48,11 @@ object AkkaTwitterStreamingCluster extends Build {
       "io.spray"                %% "spray-json"           % "1.2.6",
       "io.spray"                % "spray-testkit"         % "1.3.1" % "test",
 
+
+      "net.liftweb"             %% "lift-json"            % "2.5.1",
+
+      "org.specs2"              %% "specs2"               % "2.4.2" % "test",
+      "org.scalatest"           %% "scalatest"            % "2.1.3" % "test",
       "org.scalacheck"          %% "scalacheck"                   % "1.11.4" % "test",
       "org.scalamock"           %% "scalamock-scalatest-support"  % "3.0.1" % "test"
 

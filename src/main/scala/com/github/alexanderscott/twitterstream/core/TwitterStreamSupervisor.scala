@@ -4,7 +4,7 @@ import akka.actor.{ActorRef, Actor, Props}
 import scala.concurrent.Future
 import spray.http._
 import akka.actor._
-import com.github.alexanderscott.twitterstream.oauth._
+import com.github.alexanderscott.twitterstream.auth._
 import com.github.alexanderscott.twitterstream.ClusterRoles
 import akka.cluster.Cluster
 import com.typesafe.config.Config

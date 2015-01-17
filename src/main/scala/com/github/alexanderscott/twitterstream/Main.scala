@@ -1,11 +1,11 @@
 package com.github.alexanderscott.twitterstream
 
 import akka.actor.{PoisonPill, ActorSystem, Props}
-import com.github.alexanderscott.twitterstream.core._
 import com.typesafe.config._
 import akka.cluster.Cluster
 import akka.contrib.pattern.{ClusterSingletonProxy, ClusterSingletonManager}
-import com.github.alexanderscott.twitterstream.proxy.{TwitterStreamProxySingletonProxy, TwitterStreamProxyManager}
+import com.github.alexanderscott.twitterstream.proxy._
+import com.github.alexanderscott.twitterstream.core._
 
 object ClusterRoles {
   val Frontend = "frontend"
@@ -35,7 +35,7 @@ object Main extends App {
 
 
     system.actorOf(ClusterSingletonManager.props(
-      singletonProps = TwitterStreamProxyManager.props(config),
+      singletonProps = ProxyManager.props(config),
       singletonName = "proxy-manager",
       terminationMessage = PoisonPill,
       role = Some("backend")),

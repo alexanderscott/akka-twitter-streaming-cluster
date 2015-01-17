@@ -2,7 +2,7 @@ package com.github.alexanderscott.twitterstream.core
 
 import akka.actor.{Actor, ActorLogging, ActorRef, Props}
 import akka.io.IO
-import com.github.alexanderscott.twitterstream.oauth._
+import com.github.alexanderscott.twitterstream.auth._
 import spray.can.Http
 import spray.client.pipelining._
 import spray.http.{HttpRequest, _}
@@ -23,9 +23,7 @@ object TwitterStreamBackendActor {
 
 class TwitterStreamBackendActor(uri: Uri, handler: ActorRef) extends Actor
   with ActorLogging with TweetMarshaller with OAuthTwitterAuthorization {
-  this: TwitterAuthorization =>
-
-  import com.github.alexanderscott.twitterstream.core.TwitterStreamBackendActor.Protocol._
+  import TwitterStreamBackendActor.Protocol._
 
   val io = IO(Http)(context.system)
 
