@@ -1,8 +1,8 @@
-package com.github.alexanderscott.twitterstream.core
+package com.crunchdevelopment.twitterstreaming.core
 
 import akka.actor.{Actor, ActorLogging, ActorRef, Props}
 import akka.io.IO
-import com.github.alexanderscott.twitterstream.auth._
+import com.crunchdevelopment.twitterstreaming.auth._
 import spray.can.Http
 import spray.client.pipelining._
 import spray.http.{HttpRequest, _}

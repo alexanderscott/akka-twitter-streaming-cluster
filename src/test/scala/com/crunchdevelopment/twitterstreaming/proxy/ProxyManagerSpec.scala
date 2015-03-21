@@ -1,7 +1,7 @@
-package com.github.alexanderscott.twitterstream.proxy
+package com.crunchdevelopment.twitterstreaming.proxy
 
-import com.github.alexanderscott.twitterstream.proxy.ProxyManager.Protocol.GetAvailableProxy
-import com.github.alexanderscott.twitterstream.proxy.ProxyManager.TwitterProxy
+import com.crunchdevelopment.twitterstreaming.proxy.ProxyManager.Protocol.GetAvailableProxy
+import com.crunchdevelopment.twitterstreaming.proxy.ProxyManager.TwitterProxy
 import com.typesafe.config.ConfigFactory
 import org.specs2.matcher._
 import akka.testkit._

@@ -1,11 +1,11 @@
-package com.github.alexanderscott.twitterstream.core
+package com.crunchdevelopment.twitterstreaming.core
 
 import akka.actor.{ActorRef, Actor, Props}
 import scala.concurrent.Future
 import spray.http._
 import akka.actor._
-import com.github.alexanderscott.twitterstream.auth._
-import com.github.alexanderscott.twitterstream.ClusterRoles
+import com.crunchdevelopment.twitterstreaming.auth._
+import com.crunchdevelopment.twitterstreaming.ClusterRoles
 import akka.cluster.Cluster
 import com.typesafe.config.Config
 import akka.pattern.ask

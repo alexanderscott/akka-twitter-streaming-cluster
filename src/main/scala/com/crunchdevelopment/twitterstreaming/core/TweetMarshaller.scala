@@ -1,6 +1,6 @@
-package com.github.alexanderscott.twitterstream.core
+package com.crunchdevelopment.twitterstreaming.core
 
-import com.github.alexanderscott.twitterstream.domain.{Tweet, TwitterPlace => Place, TwitterUser => User}
+import com.crunchdevelopment.twitterstreaming.domain.{Tweet, TwitterPlace => Place, TwitterUser => User}
 import spray.http._
 import spray.httpx.unmarshalling.{Deserialized, MalformedContent, Unmarshaller}
 import spray.json._

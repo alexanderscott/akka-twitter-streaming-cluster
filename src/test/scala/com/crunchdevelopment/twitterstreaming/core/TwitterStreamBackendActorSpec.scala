@@ -1,4 +1,4 @@
-package com.github.alexanderscott.twitterstream.core
+package com.crunchdevelopment.twitterstreaming.core
 
 import com.typesafe.config.ConfigFactory
 import org.specs2.matcher._

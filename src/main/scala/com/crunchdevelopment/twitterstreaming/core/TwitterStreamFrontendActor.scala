@@ -1,10 +1,10 @@
-package com.github.alexanderscott.twitterstream.core
+package com.crunchdevelopment.twitterstreaming.core
 
 import akka.actor.{ActorLogging, Props}
 import akka.io._
 import akka.pattern.ask
-import com.github.alexanderscott.twitterstream.core.TwitterStreamBackendActor.Protocol.TrackStatusRequest
-import com.github.alexanderscott.twitterstream.core.TwitterStreamSupervisor.Protocol.GetTracks
+import com.crunchdevelopment.twitterstreaming.core.TwitterStreamBackendActor.Protocol.TrackStatusRequest
+import com.crunchdevelopment.twitterstreaming.core.TwitterStreamSupervisor.Protocol.GetTracks
 import com.typesafe.config.Config
 import spray.can.Http
 import spray.http.MediaTypes._

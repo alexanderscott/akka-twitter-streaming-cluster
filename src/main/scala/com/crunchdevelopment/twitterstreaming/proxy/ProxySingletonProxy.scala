@@ -1,4 +1,4 @@
-package com.github.alexanderscott.twitterstream.proxy
+package com.crunchdevelopment.twitterstreaming.proxy
 
 import akka.actor.Actor
 import akka.cluster.Cluster

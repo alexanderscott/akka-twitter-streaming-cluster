@@ -1,4 +1,4 @@
-package com.github.alexanderscott.twitterstream.util
+package com.crunchdevelopment.twitterstreaming.util
 
 /**
  * BackOff

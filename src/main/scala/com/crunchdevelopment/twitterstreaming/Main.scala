@@ -1,11 +1,11 @@
-package com.github.alexanderscott.twitterstream
+package com.crunchdevelopment.twitterstreaming
 
 import akka.actor.{PoisonPill, ActorSystem, Props}
 import com.typesafe.config._
 import akka.cluster.Cluster
 import akka.contrib.pattern.{ClusterSingletonProxy, ClusterSingletonManager}
-import com.github.alexanderscott.twitterstream.proxy._
-import com.github.alexanderscott.twitterstream.core._
+import com.crunchdevelopment.twitterstreaming.proxy._
+import com.crunchdevelopment.twitterstreaming.core._
 
 object ClusterRoles {
   val Frontend = "frontend"

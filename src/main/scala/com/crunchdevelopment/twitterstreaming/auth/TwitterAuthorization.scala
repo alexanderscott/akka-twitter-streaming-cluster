@@ -1,4 +1,4 @@
-package com.github.alexanderscott.twitterstream.auth
+package com.crunchdevelopment.twitterstream.auth
 
 import com.typesafe.config.ConfigFactory
 import spray.http.HttpRequest
